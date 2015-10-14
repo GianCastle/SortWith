@@ -63,7 +63,18 @@ SortWith.insertion =  function(arr) {
         }
         arr[j] = aux;
     }
+    
+    for (var h = a.length; h = parseInt(h / 2);) {
+        for (var i = h; i < a.length; i++) {
+            var k = a[i];
+            for (var j = i; j >= h && k < a[j - h]; j -= h)
+                a[j] = a[j - h];
+            a[j] = k;
+        }
+    }
+    return arr;
 } 
+
 
 /*  Function to create an array[elements] and put some random numbers for testing
  *  Where [Elements] is the amount of elements to be stored in the array
