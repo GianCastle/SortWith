@@ -2,8 +2,8 @@
 
 function SortWith() {};
 
-//Sorting Algorithm: The Cocktail Shaker Sort
-// Complexity: O(n2)
+// Sorting Algorithm: The Cocktail Shaker Sort
+// Time complexity: O(n2)
 SortWith.cocktail = function (arr) {
     for (var i = 0; i < arr.length / 2; ++i) {
         var swap = false;
@@ -27,8 +27,10 @@ SortWith.cocktail = function (arr) {
             break;
     }
 }
-//Sorting Algorithm: The Bubble Sort
-//Complexity:  O(n2)
+
+
+// Sorting Algorithm: The Bubble Sort
+// time complexity:  O(n2)
 SortWith.bubble = function (arr) {
     var aux;
     for (var i = 0; i < arr.length; ++i) {
@@ -41,8 +43,10 @@ SortWith.bubble = function (arr) {
         }
     }
 }
-//Sorting algorithm: Selection Sort
-//Complexity: O(n2) 
+
+
+// Sorting algorithm: Selection Sort
+// Time complexity: O(n2) 
 SortWith.selection = function (arr) {
     for (var i = 0; i < arr.length - 1; ++i) {
         var max = i;
@@ -55,8 +59,10 @@ SortWith.selection = function (arr) {
         arr[max] = aux;
     }
 }
-//Sorting algorithm: Inserstion Sort
-//Complexity: O(n2)
+
+
+// Sorting algorithm: Inserstion Sort
+// Time complexity: O(n2)
 SortWith.insertion =  function(arr) {
     for(var i = 0; i < arr.length - 1; ++i) {
         var j = i + 1;
@@ -77,9 +83,11 @@ SortWith.insertion =  function(arr) {
         }
     }
     return arr;
-} 
-//Sorting algorithm: The Quick Sort
-//Complexity: O(n log n)
+}
+
+ 
+// Sorting algorithm: The Quick Sort
+// Time complexity: O(n log n)
 SortWith.quickSort = function(arr) {
     var left = [];
     var rigth = [];
@@ -93,11 +101,41 @@ SortWith.quickSort = function(arr) {
 }
 
 
+// Sorting algotithm: Merge Sort
+// Time complexity: O(n log n)
+SortWith.mergesort = function(arr) {
+    var a, b, n, pivot;
+    n = arr.length;
+    if (n === 1) 
+      return arr;
+    pivot = Math.floor(n / 2);
+    return (function(a, b) {
+			    var c, i, j, k, max;
+			    i = j = k = 0;
+			    c = [];
+			    max = a.length + b.length;
+			    while (i < a.length && j < b.length) 
+			      if (a[i] < b[j]) 
+			        c[k++] = a[i++];
+			      else 
+			        c[k++] = b[j++];
+			        
+			    while (i < a.length) 
+			      c[k++] = a[i++];
+			    
+			    while (j < b.length) 
+			      c[k++] = b[j++];
+			    
+			    return c;
+			  })(mergesort(arr.slice(0, pivot)), mergesort(arr.slice(pivot, n)));
+  };
+
 
 /*  Function to create an array[elements] and put some random numbers for testing
  *  Where [Elements] is the amount of elements to be stored in the array
  *  WHere [range] is the range of the numbers to be stored in the array
  */
+// Time complexity: O(n)
 SortWith.createRamdomArr = function (elements, range) {
     var arr = [];
     while (--elements) {
