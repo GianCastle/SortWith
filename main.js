@@ -78,6 +78,20 @@ SortWith.insertion =  function(arr) {
     }
     return arr;
 } 
+//Sorting algorithm: The Quick Sort
+//Complexity: O(n log n)
+SortWith.quickSort = function(arr) {
+    var left = [];
+    var rigth = [];
+    var piv = arr[0];
+    
+    for(var i = 0; i < arr.length; ++i) {
+        arr[i] < piv ? left.push(arr[i]) : rigth.push(arr[i]);
+    }
+    
+    return SortWith.quickSort(left).concat(piv, SortWith.quickSort(rigth));
+}
+
 
 
 /*  Function to create an array[elements] and put some random numbers for testing
@@ -85,11 +99,11 @@ SortWith.insertion =  function(arr) {
  *  WHere [range] is the range of the numbers to be stored in the array
  */
 SortWith.createRamdomArr = function (elements, range) {
-    var _arr = [];
+    var arr = [];
     while (--elements) {
-        _arr.push(Math.floor(Math.random() * range) + 1);
+        arr.push(Math.floor(Math.random() * range) + 1);
     }
 
-    return _arr;
+    return arr;
 }
 
