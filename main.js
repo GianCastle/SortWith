@@ -63,17 +63,17 @@ SortWith.selection = function (arr) {
 
 // Sorting algorithm: Inserstion Sort
 // Time complexity: O(n2)
-SortWith.insertion =  function(arr) {
-    for(var i = 0; i < arr.length - 1; ++i) {
+SortWith.insertion = function (arr) {
+    for (var i = 0; i < arr.length - 1; ++i) {
         var j = i + 1;
         var aux = arr[j];
-        while( j > 0 && aux > arr[j - 1]) {
+        while (j > 0 && aux > arr[j - 1]) {
             arr[j] = arr[j - 1];
             --j;
         }
         arr[j] = aux;
     }
-    
+
     for (var h = a.length; h = parseInt(h / 2);) {
         for (var i = h; i < a.length; i++) {
             var k = a[i];
@@ -85,50 +85,50 @@ SortWith.insertion =  function(arr) {
     return arr;
 }
 
- 
+
 // Sorting algorithm: The Quick Sort
 // Time complexity: O(n log n)
-SortWith.quickSort = function(arr) {
+SortWith.quickSort = function (arr) {
     var left = [];
     var rigth = [];
     var piv = arr[0];
-    
-    for(var i = 0; i < arr.length; ++i) {
+
+    for (var i = 0; i < arr.length; ++i) {
         arr[i] < piv ? left.push(arr[i]) : rigth.push(arr[i]);
     }
-    
+
     return SortWith.quickSort(left).concat(piv, SortWith.quickSort(rigth));
 }
 
 
 // Sorting algotithm: Merge Sort
 // Time complexity: O(n log n)
-SortWith.mergesort = function(arr) {
+SortWith.mergesort = function (arr) {
     var a, b, n, pivot;
     n = arr.length;
-    if (n === 1) 
-      return arr;
+    if (n === 1)
+        return arr;
     pivot = Math.floor(n / 2);
-    return (function(a, b) {
-			    var c, i, j, k, max;
-			    i = j = k = 0;
-			    c = [];
-			    max = a.length + b.length;
-			    while (i < a.length && j < b.length) 
-			      if (a[i] < b[j]) 
-			        c[k++] = a[i++];
-			      else 
-			        c[k++] = b[j++];
-			        
-			    while (i < a.length) 
-			      c[k++] = a[i++];
-			    
-			    while (j < b.length) 
-			      c[k++] = b[j++];
-			    
-			    return c;
-			  })(mergesort(arr.slice(0, pivot)), mergesort(arr.slice(pivot, n)));
-  };
+    return (function (a, b) {
+        var c, i, j, k, max;
+        i = j = k = 0;
+        c = [];
+        max = a.length + b.length;
+        while (i < a.length && j < b.length)
+            if (a[i] < b[j])
+                c[k++] = a[i++];
+            else
+                c[k++] = b[j++];
+
+        while (i < a.length)
+            c[k++] = a[i++];
+
+        while (j < b.length)
+            c[k++] = b[j++];
+
+        return c;
+    })(mergesort(arr.slice(0, pivot)), mergesort(arr.slice(pivot, n)));
+};
 
 
 /*  Function to create an array[elements] and put some random numbers for testing
@@ -144,4 +144,3 @@ SortWith.createRamdomArr = function (elements, range) {
 
     return arr;
 }
-
