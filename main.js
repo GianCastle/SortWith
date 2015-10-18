@@ -89,7 +89,7 @@ SortWith.insertion = function (arr) {
 // Sorting algorithm: The Quick Sort
 // Time complexity: O(n log n)
 SortWith.quickSort = function (arr) {
-    var left = [];
+    var left = []; /
     var rigth = [];
     var piv = arr[0];
 
@@ -134,8 +134,9 @@ SortWith.mergesort = function (arr) {
 /*  Function to create an array[elements] and put some random numbers for testing
  *  Where [Elements] is the amount of elements to be stored in the array
  *  WHere [range] is the range of the numbers to be stored in the array
+ * Time complexity: O(n)
  */
-// Time complexity: O(n)
+
 SortWith.createRamdomArr = function (elements, range) {
     var arr = [];
     while (--elements) {
