@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorth With </title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $(function () {
+            var arr = SortWith.createRamdomArr(10, 100);
+            $('#array_ordered').append(arr.join(', '));
+            SortWith.insertion(arr);
+            $('#array_unordered').append(arr.join(', '));
+        });
+    </script>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Unsorted</h2>
+            <h3 id="array_unordered"></h3>
+            <br>
+            <h2>Sorted</h2>
+            <h3 id="array_ordered"></h3>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

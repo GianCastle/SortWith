@@ -1,6 +1,7 @@
 //Sorting algorithms if i need it one day   
 
-function SortWith() {};
+function SortWith() {}; 
+    
 
 // Sorting Algorithm: The Cocktail Shaker Sort
 // Time complexity: O(n2)
@@ -74,12 +75,12 @@ SortWith.insertion = function (arr) {
         arr[j] = aux;
     }
 
-    for (var h = a.length; h = parseInt(h / 2);) {
-        for (var i = h; i < a.length; i++) {
-            var k = a[i];
-            for (var j = i; j >= h && k < a[j - h]; j -= h)
-                a[j] = a[j - h];
-            a[j] = k;
+    for (var h = arr.length; h = parseInt(h / 2);) {
+        for (var i = h; i < arr.length; i++) {
+            var k = arr[i];
+            for (var j = i; j >= h && k < arr[j - h]; j -= h)
+                arr[j] = arr[j - h];
+            arr[j] = k;
         }
     }
     return arr;
@@ -89,7 +90,7 @@ SortWith.insertion = function (arr) {
 // Sorting algorithm: The Quick Sort
 // Time complexity: O(n log n)
 SortWith.quickSort = function (arr) {
-    var left = []; /
+    var left = []; 
     var rigth = [];
     var piv = arr[0];
 
