@@ -146,3 +146,5 @@ SortWith.createRamdomArr = function (elements, range) {
 
     return arr;
 }
+
+console.log(arr);
