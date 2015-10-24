@@ -13,56 +13,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Dropdown
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#" id="cocktail">Cocktail Shaker sort</a></li>
-            <li><a href="#" id="bubble">Bubble sort</a></li>
-            <li><a href="#" id="selection">Selection sort</a></li>
-            <li><a href="#" id="insertion">Insertion Sort</a></li>
-            <li><a href="#" id="merge">Merge sort</a></li>
-            <li><a href="#" id="quicksort">Quick sort</a></li>
-            <li><strong>More comming soon!</strong></li>
-        </ul>
-    </div>
-    <script>
-        //TODO logic event when clicked
-        $(function () {
-            $('#cocktail').click(function() {
-                
-            });
-            $('#bubble').click(function() {
-                
-            });
-            $('#selection').click(function() {
-                
-            });
-            $('#insertion').click(function() {
-                
-            });
-            $('#merge').click(function() {
-                
-            });
+     <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        SortWith
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">The Cocktail Shaker</a>
+                </li>
+                <li>
+                    <a href="#">The Bubble Sort</a>
+                </li>
+                <li>
+                    <a href="#">The Insertion Sort</a>
+                </li>
+                <li>
+                    <a href="#">The Selection Sort</a>
+                </li>
+                <li>
+                    <a href="#">The Merge Sort</a>
+                </li>
+                <li>
+                    <a href="#">The Quick Sort</a>
+                </li>
+            </ul>
             
-            $('#quicksort').click(function() {
-                
-            });
-        });
-    </script>
-    <div class="container">
-        <div class="jumbotron">
-            <h2>Unsorted</h2>
-            <h3 id="array_unordered"></h3>
-            <br>
-            <h2>Sorted</h2>
-            <h3 id="array_ordered"></h3>
         </div>
+    </div>
+    <div class="jumbotron">
+        <h1>Sortwith</h1>
+    </div>
 
-    </div>
-    </div>
 </body>
 
-</html>
+</html>    
