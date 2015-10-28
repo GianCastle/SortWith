@@ -138,7 +138,7 @@ SortWith.mergesort = function (arr) {
  * Time complexity: O(n)
  */
 
-SortWith.createRamdomArr = function (elements, range) {
+SortWith.createRandomArr = function (elements, range) {
     var arr = [];
     while (--elements) {
         arr.push(Math.floor(Math.random() * range) + 1);
